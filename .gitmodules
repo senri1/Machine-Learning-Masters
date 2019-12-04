@@ -1,0 +1,3 @@
+[submodule "Machine-learning-code/3rd-year-project"]
+	path = Machine-learning-code/3rd-year-project
+	url = https://github.com/senri1/3rd-year-project.git
