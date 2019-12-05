@@ -123,15 +123,3 @@ class DQNagent():
         self.epsilon = metadata[0]
         self.training_steps = metadata[1]
 
-"""
-done = False
-initial_state = env.reset()
-action = agent.getAction(LazyFrame2Torch(initial_state)) 
-state, reward, done, _ = env.step(action)
-memory.add(initial_state,action,reward,state,done )
-
-action = agent.getAction(LazyFrame2Torch(state)) 
-next_state,reward,done,_ = env.step(action)
-memory.add(state,action,reward,next_state,done)
-state = next_state
-"""

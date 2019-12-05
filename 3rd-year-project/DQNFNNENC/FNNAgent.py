@@ -66,7 +66,7 @@ def create_CAE(num_actions, encoder1, decoder1):
 
     
 
-class Linearagent():
+class FNNAgent():
     
     def __init__(
         self,
@@ -157,7 +157,7 @@ class Linearagent():
 
 
     def save_encoder(self,dir):
-        """ saves the CAE as well as the mean and standard deviation of states obtained from the data it was trained on."""
+        """ saves the CAE. """
         try:
             torch.save(self.encoder.state_dict(),dir + 'encoder' + '.pth')
             print('saved encoder')
@@ -171,8 +171,7 @@ class Linearagent():
 
     
     def load_encoder(self,dir):
-        """ This method loads a convolutional autoencoder trained on the environment specified in self.env, as well as
-            the mean and standard deviation of the states obtained from the training data used to train the CAE. """
+        """ This method loads a convolutional autoencoder trained on the environment specified in self.env. """
         try:
             self.encoder.load_state_dict(torch.load(dir + 'encoder' + '.pth'))
             print('loaded encoder')
